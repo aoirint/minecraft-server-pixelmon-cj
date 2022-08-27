@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:2022.11.0-java8-jdk
+    ports:
+      - "${SERVER_PORT}:25565"
+    environment:
+      EULA: "TRUE"
+      TZ: ${TZ}
+      TYPE: "CURSEFORGE" # https://github.com/itzg/docker-minecraft-server#server-types
+      CF_SERVER_MOD: /modpacks/serverpack842_the-pixelmon-modpack.zip
+      VERSION: "1.12.2" # https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs
+      DIFFICULTY: ${DIFFICULTY}
+      SERVER_NAME: ${SERVER_NAME}
+      ENABLE_WHITELIST: ${ENABLE_WHITELIST}
+      WHITELIST: ${WHITELIST}
+      OPS: ${OPS}
+      SPAWN_PROTECTION: ${SPAWN_PROTECTION}
+      VIEW_DISTANCE: ${VIEW_DISTANCE}
+      SEED: ${SEED}
+      MODE: ${MODE}
+      PVP: ${PVP}
+      LEVEL_TYPE: ${LEVEL_TYPE}
+      GENERATOR_SETTINGS: ${GENERATOR_SETTINGS}
+      ONLINE_MODE: ${ONLINE_MODE}
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./data:/data
+      - ./modpacks:/modpacks
+

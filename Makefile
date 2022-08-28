@@ -11,6 +11,11 @@ backup-all:
 backup-world:
 	zip -r "backups/data_world_$(shell date '+%Y-%m-%d_%H-%M-%S').zip" "./data/FeedTheBeast/serverpack/world"
 
+.PHONY: save-all
+save-all:
+	@$(eval PID := $(shell docker compose top | grep 'java -server' | awk '{ print $$2 }'))
+	echo "/save-all" > /proc/$(PID)/fd/0
+
 .PHONY: get-pid
 get-pid:
 	@echo $(shell docker compose top | grep 'java -server' | awk '{ print $$2 }')

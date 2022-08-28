@@ -1,7 +1,7 @@
 include .env
 
 MESSAGE=テストメッセージ
-GAMER_TAG=
+PLAYER_ID=
 
 .PHONY: backup-all
 backup-all:

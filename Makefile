@@ -5,11 +5,11 @@ PLAYER_ID=
 
 .PHONY: backup-all
 backup-all:
-	zip -r "backups/data_$(shell date '+%Y-%m-%d_%H-%M-%S').zip" "./data"
+	7z a "backups/data_$(shell date '+%Y-%m-%d_%H-%M-%S').7z" "./data"
 
 .PHONY: backup-world
 backup-world:
-	zip -r "backups/data_world_$(shell date '+%Y-%m-%d_%H-%M-%S').zip" "./data/FeedTheBeast/serverpack/world"
+	7z a "backups/data_world_$(shell date '+%Y-%m-%d_%H-%M-%S').7z" "./data/FeedTheBeast/serverpack/world"
 
 .PHONY: save-all
 save-all:

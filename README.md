@@ -2,7 +2,12 @@
 
 Pixelmon ModPackを導入した身内向けサーバインスタンス。
 
-- <https://www.curseforge.com/minecraft/modpacks/the-pixelmon-modpack>
+## サーバー側構成
+
+- Minecraft 1.12.2
+- Minecraft Forge
+- (CurseForge) The Pixelmon Modpack: <https://www.curseforge.com/minecraft/modpacks/the-pixelmon-modpack>
+- Dynmap Forge
 
 ## クライアント環境構築
 

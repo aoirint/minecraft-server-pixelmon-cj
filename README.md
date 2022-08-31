@@ -2,7 +2,7 @@
 
 Pixelmon ModPackを導入した身内向けサーバインスタンス。
 
-## サーバー側構成
+## サーバ側構成
 
 - Minecraft 1.12.2
 - Minecraft Forge
@@ -35,4 +35,20 @@ docker compose ps
 
 ```shell
 docker attach <container_name>
+```
+
+## メンテナンスコマンド
+
+### ワールドサイズの制限
+
+```shell
+/worldborder set 20000
+```
+
+### Dynmapの描画
+
+```shell
+/dynmap radiusrender world 0 0 1000
+
+/dynmap cancelrender world
 ```

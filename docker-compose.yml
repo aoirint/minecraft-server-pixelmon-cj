@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   minecraft:
-    image: itzg/minecraft-server:2022.11.0-java8-jdk
+    image: itzg/minecraft-server:2022.12.0-java8-jdk
     ports:
       - "${SERVER_PORT}:25565"
       - "${HOST_DYNMAP_PORT}:8123"
